@@ -70,6 +70,7 @@
 
 # HotSpot configuration
 Configure IP
+```sh
 /ip address
 add address=192.168.1.1/24  interface=ether1
 add address=103.100.0.2/30  interface=ether2 
@@ -116,5 +117,5 @@ add address-pool=hs-pool-1 advertise=no idle-timeout=none keepalive-timeout=2m n
 
 Add Default route
 /ip route add gateway=103.100.0.1
-
+```
 
