@@ -71,6 +71,8 @@
 # HotSpot configuration
 Configure IP
 ```sh
+# DHCP Configuration Start
+
 /ip address
 add address=192.168.1.1/24  interface=ether1
 add address=103.100.0.2/30  interface=ether2 
@@ -89,6 +91,7 @@ add address-pool=hs-pool-1 authoritative=after-2sec-delay bootp-support=static d
 /ip dhcp-server config set store-leases-disk=5m
 /ip dhcp-server network add address=192.168.1.0/24 comment="hotspot network" gateway=192.168.1.1
 
+# DHCP Configuration End
 
  
 Add HOTSPOT
