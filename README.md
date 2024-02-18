@@ -24,7 +24,8 @@
 ধাপ ৩ : এখন আমাদেরকে রাউট বলে দিতে হবে, এই রাউট সাধারণত ISP এন্ড এর আইপি বসাতে হয় অথবা ISP এন্ড থেকে প্রাপ্ত Gateway এর এডড্রেসটি বসাতে হয়, এর জন্যে প্রয়োজনীয় কমান্ড নিচে দেওয়া হল -
 ```sh
    # রাউট বা গেটওয়ে কনফিগার করার প্রক্রিয়া 
-   ip route add gateway=192.168.50.1
+   ip route add gateway=192.168.50.1 #without dst-address
+   ip route add dst-address=0.0.0.0/0 gateway=192.168.50.1 #This is the prefer method for configuring destitaion and gateway. 
 ```
 
 ### সোর্স রাউট কনফিগার করার প্রক্রিয়া 
